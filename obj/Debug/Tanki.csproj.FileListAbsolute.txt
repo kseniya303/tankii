@@ -1,0 +1,7 @@
+C:\Users\st\source\repos\Tanki\Tanki\bin\Debug\Tanki.exe.config
+C:\Users\st\source\repos\Tanki\Tanki\bin\Debug\Tanki.exe
+C:\Users\st\source\repos\Tanki\Tanki\bin\Debug\Tanki.pdb
+C:\Users\st\source\repos\Tanki\Tanki\obj\Debug\Tanki.csprojAssemblyReference.cache
+C:\Users\st\source\repos\Tanki\Tanki\obj\Debug\Tanki.csproj.CoreCompileInputs.cache
+C:\Users\st\source\repos\Tanki\Tanki\obj\Debug\Tanki.exe
+C:\Users\st\source\repos\Tanki\Tanki\obj\Debug\Tanki.pdb
