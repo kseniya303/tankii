@@ -27,14 +27,22 @@ namespace Tanki
                 pantera[i] = new Tank(rnd.Next(5, 10), rnd.Next(80, 110), rnd.Next(1, 100), rnd.Next(1, 10), rnd.Next(1, 10), "pantera");
             }
 
-            for (int i = 0; i < p.Length; i++)
+            for (int i = 0; i < 3; i++)
             {
-               // t[i].Print();
-               // pantera[i].Print();
+
+                Console.WriteLine("До боя:");
+                t[i].Print();
+                pantera[i].Print();
+                Tank.Winner(t[i], pantera[i]);
+                Console.WriteLine("Послк боя:");
+                t[i].Print();
+                pantera[i].Print();
                 p[i] = t[i] * pantera[i];
-                
                 Console.WriteLine("Победил:");
-                //p[i].Print();
+                p[i].Print();
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
             }
 
             //var t34List = new List<Tank>();
