@@ -57,8 +57,8 @@ namespace Tanki
                 tank1.experience++;
                 tank2.experience++;
                 tank2.camouflage++;
-                tank1.Print();
-                tank2.Print();
+                //tank1.Print();
+                //tank2.Print();
                 return tank1;
            }
             else
@@ -68,8 +68,8 @@ namespace Tanki
                 tank2.experience++;
                 tank1.experience++;
                 tank1.camouflage++;
-                tank2.Print();
-                tank1.Print();
+                //tank2.Print();
+                //tank1.Print();
                 return tank2;
             } 
         }
