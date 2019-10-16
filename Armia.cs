@@ -19,10 +19,8 @@ namespace Tanki
        
         public IEnumerator<Tank> GetEnumerator()
         {
-            //var rnd = new Random();
-            //return _tankList.OrderBy(t=>rnd.Next()).GetEnumerator(); //проходит по перемешанному списку танков
-            return _enumerator;
-
+            var rnd = new Random();
+            return _tankList.OrderBy(t=>rnd.Next()).GetEnumerator(); //проходит по перемешанному списку танков
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
