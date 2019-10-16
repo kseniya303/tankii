@@ -46,33 +46,19 @@ namespace Tanki
             Console.WriteLine("Урон = " + loss + " Уровень брони = " + health + " Маневренность = " + Mob + " Маскировка " + camouflage + " Опыт " + experience +"\n");
         }
     
-        public static Tank operator *(Tank tank1, Tank tank2)
+          public static Tank Winner(Tank tank1, Tank tank2)
         {
-            if (tank1.loss > tank2.loss && tank1.health > tank2.health)
+            var sum_par_t1 = tank1.Mob + tank1.camouflage + tank1.experience;
+            var sum_par_t2 = tank2.Mob + tank2.camouflage + tank2.experience;
+
+            if (sum_par_t1 > sum_par_t2)
             {
                 tank2.health -= tank1.loss;
                 tank1.health -= tank2.loss / 2;
                 tank1.experience++;
                 tank2.experience++;
                 tank2.camouflage++;
-                return tank1;
-            }
-            if (tank1.loss > tank2.loss && tank1.Mob > tank2.Mob)
-            {
-                tank2.health -= tank1.loss;
-                tank1.health -= tank2.loss / 2;
-                tank1.experience++;
-                tank2.experience++;
-                tank2.camouflage++;
-                return tank1;
-            }
-            if (tank1.health > tank2.health && tank1.Mob > tank2.Mob)
-            {
-                tank2.health -= tank1.loss;
-                tank1.health -= tank2.loss / 2;
-                tank1.experience++;
-                tank2.experience++;
-                tank2.camouflage++;
+                // tank1.Print();
                 return tank1;
             }
             else
@@ -82,7 +68,29 @@ namespace Tanki
                 tank2.experience++;
                 tank1.experience++;
                 tank1.camouflage++;
+                // tank2.Print();
+
                 return tank2;
+            }
+        }
+        public static Tank operator *(Tank T34, Tank pantera)
+        {
+
+            if (T34.loss > pantera.loss && T34.health > pantera.health)
+            {
+                return T34;
+            }
+            if (T34.loss > pantera.loss && T34.Mob > pantera.Mob)
+            {
+                return T34;
+            }
+            if (T34.health > pantera.health && T34.Mob > pantera.Mob)
+            {
+                return T34;
+            }
+            else
+            {
+                return pantera;
             }
         }
 
