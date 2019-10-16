@@ -35,6 +35,7 @@ namespace Tanki
                 //Console.WriteLine("ПослЕ боя:");
                 //t[i].Print();
                 //pantera[i].Print();
+                Tank.Winner(t[i], pantera[i]);
                 p[i] = t[i] * pantera[i];
                 Console.WriteLine("Победил:");
                 p[i].Print();
