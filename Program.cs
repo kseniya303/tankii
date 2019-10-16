@@ -36,7 +36,7 @@ namespace Tanki
                 //t[i].Print();
                 //pantera[i].Print();
                 Tank.Winner(t[i], pantera[i]);
-                p[i] = (Tank)t[i] * (Tank)pantera[i];
+                p[i] = t[i] * pantera[i];
                 Console.WriteLine("Победил:");
                 p[i].Print();
                 if (p[i] == p[2])
