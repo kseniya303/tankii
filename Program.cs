@@ -12,22 +12,22 @@ namespace Tanki
         {
             var rnd = new Random();
             Tank[] p = new Tank[3];
-            Tank[] t = new Tank[3];
-            for(int i =0; i < p.Length; i++)
+            T34[] t = new T34[3];
+            for (int i = 0; i < 3; i++)
             {
                 p[i] = new Tank();
             }
             for (int i = 0; i < p.Length; i++)
             {
-                t[i] = new Tank(rnd.Next(5, 10), rnd.Next(80, 110), rnd.Next(1, 100), rnd.Next(1, 10), rnd.Next(1, 10), "T34");
+                t[i] = new T34(rnd.Next(5, 10), rnd.Next(80, 110), rnd.Next(1, 100), rnd.Next(1, 10), rnd.Next(1, 10), "T34");
             }
-            Tank[] pantera = new Tank[3];
+            Pantera[] pantera = new Pantera[3];
             for (int i = 0; i < p.Length; i++)
             {
-                pantera[i] = new Tank(rnd.Next(5, 10), rnd.Next(80, 110), rnd.Next(1, 100), rnd.Next(1, 10), rnd.Next(1, 10), "pantera");
+                pantera[i] = new Pantera(rnd.Next(5, 10), rnd.Next(80, 110), rnd.Next(1, 100), rnd.Next(1, 10), rnd.Next(1, 10), "pantera");
             }
 
-           for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 //Console.WriteLine("До боя:");
                 //t[i].Print();
@@ -36,7 +36,7 @@ namespace Tanki
                 //t[i].Print();
                 //pantera[i].Print();
                 Tank.Winner(t[i], pantera[i]);
-                p[i] = t[i] * pantera[i];
+                p[i] = (Tank)t[i] * (Tank)pantera[i];
                 Console.WriteLine("Победил:");
                 p[i].Print();
                 if (p[i] == p[2])
@@ -50,7 +50,6 @@ namespace Tanki
                 }
                 Console.WriteLine();
             }  
-
         }
     }
 }
